@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Articles </h1>
+{% for article in articles %}
+    <div style='margin-top: 3px; margin-bottom: 3px; border: 1px solid black; padding: 0 6px;'>
+        <h3>{{article.headline}}</h3>
+        <h5>{{article.pub_date}}</h6>
+    </div>
+{% endfor %}
+
+<br>
+
+<h1> Reporters </h1>
+{% for reporter in reporters %}
+    <div style='margin-top: 3px; margin-bottom: 3px; border: 1px solid black; padding: 0 6px;'>
+        <h3>{{reporter.first_name}}</h3>
+        <h5>{{reporter.last_name}}</h6>
+    </div>
+{% endfor %}
+{% endblock content %}
